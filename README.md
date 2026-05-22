@@ -18,8 +18,8 @@ Public portfolio of 12-day AI Trainer Workshop. By Day 12: 6 daily notebooks + c
 
 ## Day 2 – Resume Extractor + Six Patterns
 
--  Built resume extractor – see [Day2_ResumeExtractor.ipynb](Day2_ResumeExtractor.ipynb)
--  Completed six prompting patterns – see [Day2_SixPatterns_krishna.ipynb](Day2_SixPatterns_krishna.ipynb)
+-  Built resume extractor – see [Day2b_ResumeExtractor.ipynb](Day2_ResumeExtractor.ipynb)
+-  Completed six prompting patterns – see [Day2a_SixPatterns_krishna.ipynb](Day2_SixPatterns_krishna.ipynb)
 
 ---
 
@@ -31,7 +31,7 @@ Public portfolio of 12-day AI Trainer Workshop. By Day 12: 6 daily notebooks + c
 
 ---
 
-## Day 4 — Productivity sprint
+## Day 4A — Productivity sprint
 
 **Company:** Accenture
 **Time:** 45 minutes (timeboxed)
@@ -49,3 +49,11 @@ Public portfolio of 12-day AI Trainer Workshop. By Day 12: 6 daily notebooks + c
 3. Gamma confabulated "$3B AI investment" stat on Slide 6 —
    replaced with [verify with Accenture] since it wasn't
    in any cited source.
+
+
+   ## Day 4B — n8n Automation Workflow
+
+-  n8n self-hosted via Docker
+-  Built daily Accenture prep tip emailer
+-  Workflow: Schedule Trigger → Code → Send Email
+- ![n8n workflow](Day4_n8n_workflow.png)
