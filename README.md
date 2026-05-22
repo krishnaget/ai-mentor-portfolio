@@ -56,4 +56,4 @@ Public portfolio of 12-day AI Trainer Workshop. By Day 12: 6 daily notebooks + c
 -  n8n self-hosted via Docker
 -  Built daily Accenture prep tip emailer
 -  Workflow: Schedule Trigger → Code → Send Email
-- ![n8n workflow](Day4_n8n_workflow.png)
+
