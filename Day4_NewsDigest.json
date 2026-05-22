@@ -1,0 +1,99 @@
+{
+  "name": "Accenture Daily Prep Reminder",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "806a2bb0-ad21-4298-9014-44ac05d51777",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "jsCode": "const tips = [\n  \"Practice 2 coding problems on arrays and strings today.\",\n  \"Revise OOPs concepts — inheritance, polymorphism, encapsulation.\",\n  \"Practice your 60-second project explanation out loud.\",\n  \"Solve 1 SQL query problem — focus on joins and groupby.\",\n  \"Do a mock communication round — record yourself for 10 minutes.\",\n  \"Revise DBMS basics — normalization, indexing, transactions.\",\n  \"Practice aptitude — number series and logical reasoning today.\",\n  \"Read about Accenture's AI pivot and prepare 1 answer on it.\"\n];\n\nconst randomTip = tips[Math.floor(Math.random() * tips.length)];\n\nreturn [{ json: { tip: randomTip } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "606f2de0-3728-4ed8-8099-609fd478a7ff",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "fromEmail": "venkatavardhan07@gmail.com",
+        "toEmail": "venkatavardhan07@gmail.com",
+        "subject": "Accenture Prep Tip of the Day",
+        "emailFormat": "text",
+        "text": "{{ $json.tip }}\n\nhi this is krishna..",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "0235ba5f-9d0b-43bd-9cb2-9c867e4196f7",
+      "name": "Send an Email",
+      "webhookId": "366ef3be-2d4e-44d2-a338-80e702411d94",
+      "credentials": {
+        "smtp": {
+          "id": "uJ2vLV6WghoYo2aD",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "36b0c9dd-08c0-4474-b48f-dd0c58e52011",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "6a9292ea2e90c0721f2bed059c26da4db23c78427d2b8a65d3d3d38ca3b33545"
+  },
+  "id": "7soB7Ue7JuI229nQ",
+  "tags": []
+}
